@@ -1,0 +1,117 @@
+<%= form_with(model: talent_profile, local: true) do |form| %>
+  <% if talent_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(talent_profile.errors.count, "error") %> prohibited this talent_profile from being saved:</h2>
+
+      <ul>
+      <% talent_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :biography %>
+    <%= form.text_area :biography %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_field :address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :government_id %>
+    <%= form.text_field :government_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topsuit %>
+    <%= form.text_field :topsuit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waisthip %>
+    <%= form.text_field :waisthip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pantlength %>
+    <%= form.text_field :pantlength %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eyecolor %>
+    <%= form.text_field :eyecolor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_visible_tattoo %>
+    <%= form.check_box :has_visible_tattoo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

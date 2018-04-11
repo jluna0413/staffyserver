@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Talent Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Biography</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Sex</th>
+      <th>Birthday</th>
+      <th>Government</th>
+      <th>Topsuit</th>
+      <th>Waisthip</th>
+      <th>Pantlength</th>
+      <th>Eyecolor</th>
+      <th>Has visible tattoo</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talent_profiles.each do |talent_profile| %>
+      <tr>
+        <td><%= talent_profile.username %></td>
+        <td><%= talent_profile.first_name %></td>
+        <td><%= talent_profile.middle_name %></td>
+        <td><%= talent_profile.last_name %></td>
+        <td><%= talent_profile.biography %></td>
+        <td><%= talent_profile.phone %></td>
+        <td><%= talent_profile.address %></td>
+        <td><%= talent_profile.address2 %></td>
+        <td><%= talent_profile.city %></td>
+        <td><%= talent_profile.state %></td>
+        <td><%= talent_profile.zipcode %></td>
+        <td><%= talent_profile.sex %></td>
+        <td><%= talent_profile.birthday %></td>
+        <td><%= talent_profile.government_id %></td>
+        <td><%= talent_profile.topsuit %></td>
+        <td><%= talent_profile.waisthip %></td>
+        <td><%= talent_profile.pantlength %></td>
+        <td><%= talent_profile.eyecolor %></td>
+        <td><%= talent_profile.has_visible_tattoo %></td>
+        <td><%= talent_profile.user %></td>
+        <td><%= link_to 'Show', talent_profile %></td>
+        <td><%= link_to 'Edit', edit_talent_profile_path(talent_profile) %></td>
+        <td><%= link_to 'Destroy', talent_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Talent Profile', new_talent_profile_path %>
