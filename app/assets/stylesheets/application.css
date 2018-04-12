@@ -13,3 +13,155 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Arvo|Raleway');
+
+.raleway {
+	font-family: 'Raleway', sans-serif;
+}
+
+.arvo {
+	font-family: 'Arvo', serif;
+}
+
+.notice {
+	background: teal;
+	color: white;
+	padding: 15px;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	border-radius: 15px;
+	border: 10px solid white;
+}
+
+.alert {
+	background: red;
+	color: white;
+	padding: 15px;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	border-radius: 15px;
+	border: 10px solid white;
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: stretch; 
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+@media only screen and (max-width: 1040px) {
+	.notice {
+		margin-right: 1%;
+		margin-left: 1%;
+	}
+	.alert {
+		margin-right: 1%;
+		margin-left: 1%;
+	}
+	.container {
+		margin-left: 1px;
+		margin-right: 1px;
+		padding: 2px;
+	}
+}
+
+.centered {
+	text-align: center;
+}
+
+.tupperware {
+	background-color: #f2f2f2; 
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+th {
+	font-family: 'Arvo', serif;
+}
+
+td {
+	font-family: 'Raleway', sans-serif;
+}
+
+.newitembutton {
+	text-decoration: none;
+	color: black;
+	background-color: #f2f2f2;
+	padding: 10px;
+	margin: 2px;
+	border-radius: 8px;
+	transition: .5s;
+}
+
+.newitembutton:hover {
+	color: white;
+	background-color: black;
+	transition: .5s;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+html, body{
+	margin:0px!important;
+	height: 100%;
+}
+
+.filler{
+	min-height:15vh;
+}
+
+.mainContainer{
+	min-height: 100%;
+}
+
+footer{
+	background-color: #262626;
+	color: white;
+	min-height: 10vh;
+	overflow: hidden;
+	text-align: center;
+
+}
+
+.left-side{
+	padding-left: 30px;
+}
+
+.headline-right{
+	text-align: right;
+	padding-right: 30px;
+}
+
+#yieldContainer{
+	padding-bottom: 10px;
+}
+
+.footerText{
+	margin-top: 20px;
+}
+
+footer a:hover{
+	color:#1affc6;
+}
+
+.homeWelcome{
+	text-align: center;
+	font-size: 10vh;
+}
+
+@media only screen and (max-height: 550px) {
+	.filler{
+		min-height: 45vh;
+	}
+}

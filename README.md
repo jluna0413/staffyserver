@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+to pull new code changes:
 
-Things you may want to cover:
+'''git pull'''
 
-* Ruby version
+to run db changes/migrations:
 
-* System dependencies
+'''rails db:migrate'''
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+0.1.0 - login required and nav to talent profile.

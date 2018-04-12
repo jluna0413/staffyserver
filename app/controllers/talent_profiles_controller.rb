@@ -15,10 +15,12 @@ class TalentProfilesController < ApplicationController
   # GET /talent_profiles/new
   def new
     @talent_profile = TalentProfile.new
+    @talent_profile.user = current_user
   end
 
   # GET /talent_profiles/1/edit
   def edit
+    @talent_profile.user = current_user
   end
 
   # POST /talent_profiles
