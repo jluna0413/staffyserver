@@ -58,7 +58,7 @@
 
   <div class="field">
     <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.select :state, options_for_select([['NY'], ['NJ'], ['dude, we gotta insert 50 more of these lol']], @talent_profile.state), id: :talent_profile_state %>
   </div>
 
   <div class="field">
@@ -68,7 +68,7 @@
 
   <div class="field">
     <%= form.label :sex %>
-    <%= form.text_field :sex %>
+    <%= form.select :sex, options_for_select([['Male'], ['Female'], ['?']], @talent_profile.sex), id: :talent_profile_sex %>
   </div>
 
   <div class="field">
@@ -77,39 +77,36 @@
   </div>
 
   <div class="field">
-    <%= form.label :government_id %>
+    <label>License/ID Number</label>
     <%= form.text_field :government_id %>
   </div>
 
   <div class="field">
-    <%= form.label :topsuit %>
+    <label>Suit Top</label>
     <%= form.text_field :topsuit %>
   </div>
 
   <div class="field">
-    <%= form.label :waisthip %>
+    <label>Waist/Hip Measurement</label>
     <%= form.text_field :waisthip %>
   </div>
 
   <div class="field">
-    <%= form.label :pantlength %>
+    <label>Pant Length</label>
     <%= form.text_field :pantlength %>
   </div>
 
   <div class="field">
-    <%= form.label :eyecolor %>
+    <label>Eye Color</label>
     <%= form.text_field :eyecolor %>
   </div>
 
   <div class="field">
-    <%= form.label :has_visible_tattoo %>
+    <label>Any Visible Tatoos?</label>
     <%= form.check_box :has_visible_tattoo %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+  <% @talent_profile.user_id = current_user.id if current_user %>
 
   <div class="actions">
     <%= form.submit %>

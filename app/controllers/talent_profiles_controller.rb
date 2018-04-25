@@ -1,5 +1,13 @@
 class TalentProfilesController < ApplicationController
   before_action :set_talent_profile, only: [:show, :edit, :update, :destroy]
+  before_action :only1profile, only: [:new]
+
+  def only1profile
+    unless current_user.talent_profile == nil
+      flash[:alert] = 'You already have a profile!'
+      redirect_to '/'
+    end
+  end
 
   # GET /talent_profiles
   # GET /talent_profiles.json
