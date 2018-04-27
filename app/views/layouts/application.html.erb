@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Sheetkiller</title>
+    <title>Staffy</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -24,7 +24,7 @@
             <ul>
               <li><a class="raleway" id="homeLink" href="/">Home</a></li>
               <% if user_signed_in? %>
-                <% if !current_user.nil? %><li><a class="raleway" href="/talent_profiles/<%= current_user.talent_profile.id %>">Talent Profile</a></li><% end %>
+                <% if current_user.talent_profile.nil? %><% else %><li><a class="raleway" href="/talent_profiles/<%= current_user.talent_profile %>">Talent Profile</a></li><% end %>
                 <% if user_signed_in? %><li><a class="raleway" href="<%= edit_user_registration_path %>">Settings</a></li><% end %>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "raleway" %></li>
               <% else %>
